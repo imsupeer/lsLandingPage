@@ -1,293 +1,354 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-100" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="Simple website">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-  <meta name="author" content="Basas">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>LS Manutenção</title>
-  <link rel="stylesheet" href="css/theme.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Simple website for portifolio" />
+    <meta name="author" content="Basas" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>LS Manutenção</title>
+    <link rel="stylesheet" href="css/theme.min.css" />
 
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-300.woff2') format('woff2'),
-        url('fonts/inter-v12-latin-300.woff') format('woff');
-    }
+    <style>
+      @media (max-width: 768px) {
+        .navbar-brand img {
+          width: 150px;
+          height: auto;
+        }
 
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-regular.woff2') format('woff2'),
-        url('fonts/inter-v12-latin-regular.woff') format('woff');
-    }
+        h1.display-huge {
+          font-size: 2.5rem;
+        }
 
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-500.woff2') format('woff2'),
-        url('fonts/inter-v12-latin-500.woff') format('woff');
-    }
+        h2.display-4 {
+          font-size: 1.75rem;
+        }
 
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-700.woff2') format('woff2'),
-        url('fonts/inter-v12-latin-700.woff') format('woff');
-    }
-  </style>
-</head>
+        .lead {
+          font-size: 1rem;
+        }
 
-<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+        .btn-xl {
+          padding: 0.75rem 1.25rem;
+          font-size: 1rem;
+        }
+      }
 
-  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-    <div class="container">
-      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
-        <img src="assets/img/logo.png" alt="" height="100px" width="100px">
-        <span class="ms-md-1 mt-1 fw-bolder me-md-5 text-black">LS Manutenção</span>
-      </a>
-    </div>
-  </nav>
+      @media (max-width: 576px) {
+        .row.d-flex img {
+          width: 100%;
+          height: auto;
+        }
 
-  <main>
-    <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
-      <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
-      <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
-        <div class="row d-flex align-items-center justify-content-center py-vh-5">
-          <div class="col-12 col-xl-10">
-            <span class="h5 text-secondary fw-lighter">Nossa Missão</span>
-            <h1 class="display-huge mt-3 mb-3 lh-1">Solução, rapidez e comprometimento</h1>
+        .row.d-flex .col-12 {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(''), url('fonts/inter-v12-latin-300.woff2') format('woff2'), url('fonts/inter-v12-latin-300.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local(''), url('fonts/inter-v12-latin-regular.woff2') format('woff2'), url('fonts/inter-v12-latin-regular.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local(''), url('fonts/inter-v12-latin-500.woff2') format('woff2'), url('fonts/inter-v12-latin-500.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local(''), url('fonts/inter-v12-latin-700.woff2') format('woff2'), url('fonts/inter-v12-latin-700.woff') format('woff');
+      }
+    </style>
+  </head>
+
+  <body class="bg-blue text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+    <nav id="navScroll" class="navbar navbar-dark bg-blue fixed-top px-vw-5" tabindex="0">
+      <div style="margin-left: -50px" class="container">
+        <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
+          <img src="assets/img/logo.png" alt="" height="150px" width="300px" />
+          <span class="ms-md-1 mt-1 fw-bolder me-md-5 text-white">LS Manutenção</span>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="w-100 overflow-hidden position-relative bg-white text-black" data-aos="fade">
+        <div class="position-absolute w-100 h-100 bg-white opacity-75 top-0 start-0"></div>
+        <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
+          <div style="margin-top: 150px" class="row d-flex align-items-center justify-content-center py-vh-5">
+            <div class="col-12 col-xl-10">
+              <span class="h5 text-secondary fw-lighter">Nossa Missão</span>
+              <h1 class="display-huge mt-3 mb-3 lh-1">Solução, rapidez e comprometimento</h1>
+            </div>
+            <div class="col-12 col-xl-8">
+              <p class="lead text-secondary">
+                Atender de forma satisfatória realizando serviços de altra qualidade com soluções imediatas e ideias inovadoras, oferecendo custos
+                atraentes para o negócio, superando as espectativas da nossa clientela.
+              </p>
+            </div>
+            <div class="col-12 text-center">
+              <a
+                href="https://api.whatsapp.com/send/?phone=5574999961210&text=Vim+através+do+Instagram+para+solicitar+o+serviço+da+LS+&type=phone_number&app_absent=0"
+                class="btn btn-xl btn-light"
+                >Entre em contato</a
+              >
+            </div>
           </div>
-          <div class="col-12 col-xl-8">
-            <p class="lead text-secondary">Atender de forma satisfatória realizando serviços de altra qualidade com soluções imediatas e ideias inovadoras, oferecendo custos atraentes para o negócio, superando as espectativas da nossa clientela.</p>
+        </div>
+      </div>
+
+      <div class="w-100 position-relative bg-blue text-white bg-cover d-flex align-items-center">
+        <div class="container-fluid px-vw-5">
+          <div class="position-absolute w-100 h-50 bg-blue bottom-0 start-0"></div>
+          <div style="margin-top: 24px" class="row d-flex align-items-center position-relative justify-content-center px-0 g-5">
+            <div class="col-12 col-md-6 col-lg-5">
+              <img
+                src="assets/img/DSC_6119a.jpg"
+                width="1116"
+                height="1578"
+                class="img-fluid position-relative rounded-5 shadow"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              />
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img
+                src="assets/img/DSC_6077.JPG"
+                width="1116"
+                height="1578"
+                class="img-fluid position-relative rounded-5 shadow"
+                data-aos="fade-up"
+                data-aos-duration="750"
+              />
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <img
+                src="assets/img/DSC_6125.JPG"
+                width="1116"
+                height="1578"
+                class="img-fluid position-relative rounded-5 shadow"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              />
+            </div>
           </div>
-          <div class="col-12 text-center">
-            <a href="#" class="btn btn-xl btn-light">Entre em contato
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
+        </div>
+      </div>
+
+      <div style="margin-top: 70px" class="bg-white">
+        <div class="container px-vw-5 py-vh-5">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
+              <span class="h5 text-secondary fw-lighter">O que nós fazemos?</span>
+              <h2 class="text-black display-4">
+                Nossos serviços abrangem uma ampla gama de soluções especializadas para atender às necessidades de manutenção de equipamentos de
+                mineração.
+              </h2>
+            </div>
+            <div class="col-12 col-lg-5" data-aos="fade-left">
+              <h3 class="text-black pt-5">Estratégia</h3>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat, sed diam voluptua.<br />
+              </p>
+              <h3 class="border-top border-secondary pt-5 mt-5 text-black">Desenvolvimento</h3>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat, sed diam voluptua.<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue py-vh-3">
+        <div class="container bg-white px-vw-5 py-vh-3 rounded-5 shadow">
+          <div class="row gx-5">
+            <div class="col-12 col-md-6">
+              <div class="card bg-transparent mb-5" data-aos="zoom-in-up">
+                <div class="bg-blue shadow rounded-5 p-0">
+                  <img
+                    src="assets/img/DSC_6135.JPG"
+                    width="656"
+                    height="327"
+                    class="img-fluid rounded-5 no-bottom-radius"
+                    loading="lazy"
+                  />
+                  <div class="p-5">
+                    <h2 class="text-white fw-lighter">LS Manutenção em si:</h2>
+                    <p class="text-white pb-4 text-secondary">
+                      A LS Manutenção é uma empresa especializada em manutenção de equipamentos para os setores de mineração à céu aberto e
+                      subterrânea.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-transparent" data-aos="zoom-in-up">
+                <div class="bg-blue shadow rounded-5 p-0">
+                  <img
+                    src="assets/img/DSC_6117.JPG"
+                    width="656"
+                    height="442"
+                    class="img-fluid rounded-5 no-bottom-radius"
+                    loading="lazy"
+                  />
+                  <div class="p-5">
+                    <h2 class="text-white fw-lighter">O que oferecemos?</h2>
+                    <p class="text-white pb-4 text-secondary">
+                      Oferecemos soluções abrangentes, acompanhamento contínuo, monitoramento avançado e inspeções meticulosas para garantir a máxima
+                      eficiência e segurança dos equipamentos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="p-5 pt-0 mt-5" data-aos="fade">
+                <span class="h5 text-secondary fw-lighter">Quem somos nós?</span>
+                <h2 class="text-black display-4">Aqui vai um breve resumo sobre nossa história:</h2>
+              </div>
+              <div class="card bg-transparent mb-5 mt-5" data-aos="zoom-in-up">
+                <div class="bg-blue shadow rounded-5 p-0">
+                  <img
+                    src="assets/img/DSC_6095.JPG"
+                    width="656"
+                    height="390"
+                    class="img-fluid rounded-5 no-bottom-radius"
+                    loading="lazy"
+                  />
+                  <div class="p-5">
+                    <h2 class="text-white fw-lighter">Como?</h2>
+                    <p class="text-white pb-4 text-secondary">
+                      Juntando uma equipe de profissionais habilitados e certificados com compromisso para a qualidade e dedicação ao cliente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-transparent" data-aos="zoom-in-up">
+                <div class="bg-blue shadow rounded-5 p-0">
+                  <img
+                    src="assets/img/DSC_6137.JPG"
+                    width="656"
+                    height="327"
+                    class="img-fluid rounded-5 no-bottom-radius"
+                    loading="lazy"
+                  />
+                  <div class="p-5">
+                    <h2 class="text-white fw-lighter">Tempo de mercado</h2>
+                    <p class="text-white pb-4 text-secondary">
+                      Acumulamos mais de 30 anos de experiência no mercado, destacando-nos pela excelência técnica.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white position-relative">
+        <div class="container px-vw-5 py-vh-5">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-lg-7">
+              <img
+                class="img-fluid rounded-5 mb-n5 shadow"
+                src="assets/img/DSC_6092.JPG"
+                width="512"
+                height="512"
+                loading="lazy"
+                data-aos="zoom-in-right"
+              />
+              <img
+                class="img-fluid rounded-5 ms-5 mb-n5 shadow"
+                src="assets/img/DSC_6127.JPG"
+                width="512"
+                height="512"
+                loading="lazy"
+                data-aos="zoom-in-up"
+              />
+            </div>
+            <div class="col-12 col-lg-5 bg-blue rounded-5 py-5" data-aos="fade">
+              <span class="text-white h5 text-secondary fw-lighter">Gostou do que temos a oferecer?</span>
+              <h2 class="display-4 border-white border-top">Não perca tempo! Aqui temos a solução que você precisa.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-blue border-dark">
+      <div class="container py-vh-4 text-secondary fw-lighter">
+        <div class="row">
+          <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
+            <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
+              <img src="assets/img/logo.png" alt="" height="150px" width="300px" />
+              <span class="text-white ms-md-1 mt-1 fw-bolder me-md-5">LS Manutenção</span>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-100 position-relative bg-black text-white bg-cover d-flex align-items-center">
-      <div class="container-fluid px-vw-5">
-        <div class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"></div>
-        <div class="row d-flex align-items-center position-relative justify-content-center px-0 g-5">
-          <div class="col-12 col-lg-6">
-            <img src="assets/img/sandvik.jpg" width="2280" height="1732" alt="abstract image"
-              class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="assets/img/epiroc.jpg" width="1116" height="1578" alt="abstract image"
-              class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="2000">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="assets/img/hyd-exmaple.jpg" width="1116" height="848" alt="abstract image"
-              class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="3000">
+          <div style="margin-top: 45px; margin-left: 500px" class="col border-dark">
+            <span class="text-white h6">Contato</span>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5574999961210&text=Vim+através+do+Instagram+para+solicitar+o+serviço+da+LS+&type=phone_number&app_absent=0"
+                  class="text-white link-fancy link-fancy-light"
+                  >WhatsApp</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/lsmanutencaoeservico" class="text-white link-fancy link-fancy-light">Instagram</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bg-dark">
-      <div class="container px-vw-5 py-vh-5">
-        <div class="row d-flex align-items-center">
-          <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
-            <span class="h5 text-secondary fw-lighter">O que nós fazemos?</span>
-            <h2 class="display-4">Nossos serviços abrangem uma ampla gama de soluções especializadas para atender às necessidades de manutenção de equipamentos de mineração.</h2>
-          </div>
-          <div class="col-12 col-lg-5" data-aos="fade-left">
-            <h3 class="pt-5">Estratégia</h3>
-            <p class="text-secondary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br>
-            </p>
-            <h3 class="border-top border-secondary pt-5 mt-5">Desenvolvimento</h3>
-            <p class="text-secondary">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="text-white container text-center small py-vh-2 border-top border-white">Made by BasasDev</div>
+    </footer>
 
-    <div class="bg-black py-vh-3">
-      <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
-        <div class="row gx-5">
-          <div class="col-12 col-md-6">
-            <div class="card bg-transparent mb-5" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="assets/img/ex1.jpg" width="582" height="327" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                  <div class="p-5">
-                    <h2 class="fw-lighter">LS Manutenção em si:</h2>
-                    <p class="pb-4 text-secondary">A LS Manutenção é uma empresa especializada em manutenção de equipamentos para os setores de mineração à céu aberto e subterrânea.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="card bg-transparent" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="assets/img/ex3.jpg" width="582" height="442" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                  <div class="p-5">
-                    <h2 class="fw-lighter">O que oferecemos?</h2>
-                    <p class="pb-4 text-secondary">Oferecemos soluções abrangentes, acompanhamento contínuo, monitoramento avançado e inspeções meticulosas para garantir a máxima eficiência e segurança dos equipamentos.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-5 pt-0 mt-5" data-aos="fade">
-              <span class="h5 text-secondary fw-lighter">Quem somos nós?</span>
-              <h2 class="display-4">Aqui vai um breve resumo sobre nossa história</h2>
-            </div>
-            <div class="card bg-transparent mb-5 mt-5" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="assets/img/x2.jpg" width="582" height="390" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                  <div class="p-5">
-                    <h2 class="fw-lighter">Como?</h2>
-                    <p class="pb-4 text-secondary">Juntando uma equipe de profissionais habilitados e certificados com compromisso para a qualidade e dedicação ao cliente.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="card bg-transparent" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="assets/img/ex4.jpg" width="582" height="327" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                  <div class="p-5">
-                    <h2 class="fw-lighter">Tempo de mercado</h2>
-                    <p class="pb-4 text-secondary">Acumulamos mais de 30 anos de experiência no mercado, destacando-nos pela excelência técnica.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+    <script>
+      let scrollpos = window.scrollY;
+      const header = document.querySelector('.navbar');
+      const header_height = header.offsetHeight;
 
-    <div class="bg-dark position-relative">
-      <div class="container px-vw-5 py-vh-5">
-        <div class="row d-flex align-items-center">
-          <div class="col-12 col-lg-7">
-            <img class="img-fluid rounded-5 mb-n5 shadow" src="assets/img/businessman.jpg" width="512" height="512"
-              alt="a nice person" loading="lazy" data-aos="zoom-in-right">
-            <img class="img-fluid rounded-5 ms-5 mb-n5 shadow" src="assets/img/operator.jpg" width="512" height="512"
-              alt="another nice person" loading="lazy" data-aos="zoom-in-up">
-          </div>
-          <div class="col-12 col-lg-5 bg-dark rounded-5 py-5" data-aos="fade">
-            <span class="h5 text-secondary fw-lighter">Gostou do que temos a oferecer?</span>
-            <h2 class="display-4">Não perca tempo! Aqui temos a solução que você precisa</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+      const add_class_on_scroll = () => header.classList.add('scrolled', 'shadow-sm');
+      const remove_class_on_scroll = () => header.classList.remove('scrolled', 'shadow-sm');
 
-    <div class="container-fluid px-vw-5 position-relative" data-aos="fade">
-      <div class="position-absolute w-100 h-50 bg-black top-0 start-0"></div>
-      <div class="position-relative py-vh-5 bg-cover bg-center rounded-5"
-        style="background-image: url(img/webp/abstract12.webp)">
-        <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
-          <div class="row d-flex align-items-center">
-            <div class="col-6 d-flex align-items-center bg-dark shadow rounded-5 p-0" data-aos="zoom-in-up">
-              <div class="row d-flex justify-content-center">
-                <div class="col-12">
-                  <img src="assets/img/ceo.jpg" width="684" height="457" alt="our CEO with some nice numbers"
-                    class="img-fluid rounded-5" loading="lazy">
-                </div>
-                <div class="col-12 col-lg-10 col-xl-8 text-center my-5">
-                  <p class="lead border-bottom pb-4 border-secondary">"Lorem ipsum dolor sit amet, consetetur sadipscing
-                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                    takimata sanctus est Lorem ipsum dolor sit amet."</p>
-                  <p class="text-secondary text-center">Negao, CEO</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-5 offset-1">
-              <span class="h5 text-secondary fw-lighter">Nossos números</span>
-              <h2 class="display-huge fw-bolder" data-aos="zoom-in-left">+400</h2>
-              <p class="h4 fw-lighter text-secondary">
-                Clientes satisfeitos.
-              </p>
-              <h2 class="display-huge fw-bolder border-top border-secondary pt-5 mt-5" data-aos="zoom-in-left">98%</h2>
-              <p class="h4 fw-lighter text-secondary">
-                Taxa de sucesso de reparo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+      window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
 
-  <footer class="bg-black border-top border-dark">
-    <div class="container py-vh-4 text-secondary fw-lighter">
-      <div class="row">
-        <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
-          <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
-            <img src="assets/img/logo.png" alt="" height="100px" width="100px">
-            <span class="ms-md-1 mt-1 fw-bolder me-md-5">LS Manutenção</span>
-          </a>
-        </div>
-        <div class="col border-end border-dark">
-          <span class="h6">Contato</span>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="#" class="link-fancy link-fancy-light">WhatsApp</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container text-center small py-vh-2 border-top border-dark">Made by BasasDev</div>
-  </footer>
+        if (scrollpos >= header_height) {
+          add_class_on_scroll();
+        } else {
+          remove_class_on_scroll();
+        }
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-    });
-  </script>
-  <script>
-    let scrollpos = window.scrollY;
-    const header = document.querySelector(".navbar");
-    const header_height = header.offsetHeight;
-
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
-
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
-
-      if (scrollpos >= header_height) { add_class_on_scroll(); }
-      else { remove_class_on_scroll(); }
-
-      console.log(scrollpos);
-    })
-  </script>
-</body>
+        console.log(scrollpos);
+      });
+    </script>
+  </body>
 </html>
